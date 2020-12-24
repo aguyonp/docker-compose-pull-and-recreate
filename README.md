@@ -10,7 +10,7 @@ Download the script and execute it.
     # ./pull_and_recreate_stacks.sh
 
 ### Configure it
-Edit the "stack_path" variable from the path where your stacks folders are located (docker-compose.yml).
+Edit the "stack_path" variable with the path where your stacks folders are located.
 
 Example:
 
