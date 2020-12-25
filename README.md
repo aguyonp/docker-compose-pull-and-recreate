@@ -28,3 +28,5 @@ You can pass confirmations by adding the argument -y
 
     # ./pull_and_recreate_stacks.sh -y
 
+### Example of execution
+![Exemple](https://i.imgur.com/wGrFL73.png)
