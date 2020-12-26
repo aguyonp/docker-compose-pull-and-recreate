@@ -35,6 +35,17 @@ recreate_containers () {
         done
         echo -e "\e[39m"
 }
+dangling_image () {
+        echo -e "\e[32m"
+        echo "Removing oldest images"
+        echo -e "\e[37m"
+        for stack in "${stacks_folders[@]}"
+        do
+                cd $stacks_path/$stack
+                docker image prune -f
+        done
+        echo -e "\e[39m"
+}
 ask_yes_or_no () {
         read -p "$1 ([Y]es or [N]o): "
         case $(echo $REPLY | tr '[A-Z]' '[a-z]') in
@@ -48,6 +59,7 @@ if [ "$1" == "-y" ]
 then
         pulling_image
         recreate_containers
+        dangling_image
         echo -e "\e[36mOperation completed"
         echo -e "\e[39m"
 else
@@ -60,6 +72,7 @@ else
         else
                 pulling_image
                 recreate_containers
+                dangling_image
                 echo -e "\e[36mOperation completed"
                 echo -e "\e[39m"
         fi
