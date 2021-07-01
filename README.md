@@ -5,6 +5,8 @@ This script allows you to pull the last images of your stacks and to recreate th
 
 ### Download it
 Download the script and chmod it.
+ 
+    # wget https://raw.githubusercontent.com/aguyonp/docker-compose-pull-and-recreate/main/pull_and_recreate_stacks.sh
 
     # chmod +x pull_and_recreate_stacks.sh
 
